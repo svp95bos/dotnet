@@ -84,6 +84,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Polyfills\SyntaxValueProviderExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\DTOGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\DTOMemberGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentModel\DTOMemberGenerator.Execute.cs" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)AnalyzerReleases.Shipped.md" />

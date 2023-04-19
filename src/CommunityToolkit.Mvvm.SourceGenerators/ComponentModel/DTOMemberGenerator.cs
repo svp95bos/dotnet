@@ -9,7 +9,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace CommunityToolkit.Mvvm.SourceGenerators.ComponentModel;
+namespace CommunityToolkit.Mvvm.SourceGenerators;
 
 [Generator(LanguageNames.CSharp)]
 public sealed partial class DTOMemberGenerator : IIncrementalGenerator
