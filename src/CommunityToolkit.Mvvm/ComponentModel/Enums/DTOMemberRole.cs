@@ -1,4 +1,4 @@
-// Copyright (C)2023 Peter Rundqvist.
+// Copyright (c)2023 Peter Rundqvist.
 // All rights reserved.
 // See the LICENSE file in the project root for more information.
 
