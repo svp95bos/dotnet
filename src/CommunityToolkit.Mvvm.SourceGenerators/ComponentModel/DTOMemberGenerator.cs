@@ -29,13 +29,13 @@ public sealed partial class DTOMemberGenerator : IIncrementalGenerator
                         return default;
                     }
 
-                    FieldDeclarationSyntax fieldDeclaration = (FieldDeclarationSyntax)context.TargetNode.Parent!.Parent!;
-                    IFieldSymbol fieldSymbol = (IFieldSymbol)context.TargetSymbol;
+                    PropertyDeclarationSyntax fieldDeclaration = (PropertyDeclarationSyntax)context.TargetNode.Parent!.Parent!;
+                    IPropertySymbol propertySymbol = (IPropertySymbol)context.TargetSymbol;
 
                     // Get the hierarchy info for the target symbol, and try to gather the property info
-                    HierarchyInfo hierarchy = HierarchyInfo.From(fieldSymbol.ContainingType);
+                    HierarchyInfo hierarchy = HierarchyInfo.From(propertySymbol.ContainingType);
 
-                    _ = Execute.TryGetInfo(fieldDeclaration, fieldSymbol, context.SemanticModel, token, out PropertyInfo? propertyInfo, out ImmutableArray<DiagnosticInfo> diagnostics);
+                    _ = Execute.TryGetInfo(fieldDeclaration, propertySymbol, context.SemanticModel, token, out PropertyInfo? propertyInfo, out ImmutableArray<DiagnosticInfo> diagnostics);
 
                     return (Hierarchy: hierarchy, new Result<PropertyInfo?>(propertyInfo, diagnostics));
                 })
