@@ -86,7 +86,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0002");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0002");
     }
 
     [TestMethod]
@@ -113,7 +113,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0002");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0002");
     }
 
     [TestMethod]
@@ -133,7 +133,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0003");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0003");
     }
 
     [TestMethod]
@@ -157,7 +157,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0003");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0003");
     }
 
     [TestMethod]
@@ -960,7 +960,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0018");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0018");
     }
 
     [TestMethod]
@@ -983,7 +983,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0018");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0018");
     }
 
     [TestMethod]
@@ -1002,7 +1002,7 @@ public class Test_SourceGeneratorsDiagnostics
             }
             """;
 
-        VerifyGeneratedDiagnostics<ObservableObjectGenerator>(source, "MVVMTK0018");
+        VerifyGeneratedDiagnostics<DTOGenerator>(source, "MVVMTK0018");
     }
 
     [TestMethod]
@@ -1739,7 +1739,7 @@ public class Test_SourceGeneratorsDiagnostics
         IIncrementalGenerator[] generators =
         {
             new IMessengerRegisterAllGenerator(),
-            new ObservableObjectGenerator(),
+            new DTOGenerator(),
             new INotifyPropertyChangedGenerator(),
             new ObservablePropertyGenerator(),
             new ObservableRecipientGenerator(),
